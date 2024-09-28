@@ -7,6 +7,7 @@
 using namespace std;
 
 string* resize(string*, int);
+
 int main()
 {
 	string localbname;
@@ -21,11 +22,12 @@ int main()
 	{
 
 		cout << "\nType 'yes' to enter a business list:\nOr any other character to 'exit'" << endl;
-		cin >> localbname;
+		getline(cin, localbname);
 		 if (localbname == "yes" || localbname == "YES" || localbname == "Y" || localbname == "y")
 		{
+			
 			 cout << "Enter a local business name:" << endl;
-			 cin >> localbname;
+			 getline(cin,localbname);
 
 			localbusinesslist = resize(localbusinesslist, size);
 			localbusinesslist[size] = localbname;
